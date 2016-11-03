@@ -1263,13 +1263,13 @@ open class IMGLYCameraController: NSObject {
         videoPreviewView.isHidden = true
         
         // Adding a simple snapshot and immediately showing it
-        let snapshot = videoPreviewView.snapshotView(afterScreenUpdates: false)
+        let snapshot = videoPreviewView.snapshotView(afterScreenUpdates: true)
         snapshot?.transform = videoPreviewView.transform
         snapshot?.frame = previewView.frame
         previewView.superview?.addSubview(snapshot!)
         
         // Creating a snapshot with a UIBlurEffect added
-        let snapshotWithBlur = videoPreviewView.snapshotView(afterScreenUpdates: false)
+        let snapshotWithBlur = videoPreviewView.snapshotView(afterScreenUpdates: true)
         snapshotWithBlur?.transform = videoPreviewView.transform
         snapshotWithBlur?.frame = previewView.frame
         
